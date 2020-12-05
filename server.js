@@ -25,25 +25,38 @@ function start() {
       type: "rawlist",
       message: "What would you like to do?",
       choices: [
-        "View All Departments",
-        "View All Roles",
-        "View All Employees",
-        "Add All Departments",
-        "Add All Roles",
-        "Add All Employees",
+        "View all Departments",
+        "View all Roles",
+        "View all Employees",
+        "Add a Department",
+        "Add a Role",
+        "Add an Employee",
         "Update an Employee Role",
       ],
     })
     .then(function (answer) {
       switch (answer.whatAction) {
-        case "View All Employees":
+        case "View all Employees":
           viewEmployees();
           break;
-
+        case "View all Roles":
+          viewRoles();
+          break;
+        case "View all Departments":
+          viewDepartments();
+          break;
+        case "Add a Department":
+          addDepartments();
+          break;
+        case "Add a Role":
+          addRoles();
+          break;
         case "Add an Employee":
           addEmployee();
           break;
-        case "Remove an Employee":
+        case "Update an Employee Role":
+          updateEmployees();
+          break;
       }
     });
 }
@@ -65,11 +78,29 @@ function viewEmployees() {
 
 function addEmployee() {}
 
-function viewRoles() {}
+function viewRoles() {
+  const query = `SELECT r.title, d.name AS "department name"
+                 FROM roles AS r
+                 LEFT JOIN departments AS d 
+                 ON r.department_id = d.id`;
+
+  connection.query(query, function (err, res) {
+    console.table(res);
+    connection.end();
+  });
+}
 
 function addRoles() {}
 
-function viewDepartments() {}
+function viewDepartments() {
+  const query = `SELECT d.name AS "department name", d.id
+                 FROM departments AS d`;
+
+  connection.query(query, function (err, res) {
+    console.table(res);
+    connection.end();
+  });
+}
 
 function addDepartments() {}
 
