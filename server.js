@@ -250,7 +250,7 @@ function updateEmployeeRoles() {
                  r.title, r.salary, d.name AS "department name"
                  FROM employees AS e
                  LEFT JOIN roles AS r 
-                 ON CONCAT (r.id) AS "role ID" e.role_id = r.id
+                 ON e.role_id = r.id
                  LEFT JOIN departments AS d 
                  ON r.department_id = d.id`;
 
@@ -270,7 +270,7 @@ function updateEmployeeRoles() {
         },
       ])
       .then(function (res) {
-        var query = `UPDATE employees SET role_id = '${res.updatedRoleID}'  WHERE id = ${res.employeeID};`;
+        var query = `UPDATE employees SET role_id = ${res.updatedRoleID}  WHERE id = ${res.employeeID};`;
 
         const addedQuery = `SELECT CONCAT (e.id, " ", e.first_name, " ", e.last_name) AS "full name", 
                  r.title, r.salary, d.name AS "department name"
