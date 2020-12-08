@@ -13,6 +13,7 @@ This is a Content Management System (CMS) for tracking employees within an org. 
 3. [Contributors](#Contributors)
 4. [License](#License)
 5. [Contact](#Contact)
+6. [Gif of App](#Gif-of-App)
 
 ## Installation
 
@@ -24,9 +25,11 @@ This is used for tracking your employees within a company.
 
 ## License MIT
 
+This is covered under the ![MIT license](https://opensource.org/licenses/MIT)
+
 ## Contributors
 
-Jasmine Teters
+Jasmine Teters and a little help from classmates and my tutor.
 
 ## Tests
 
@@ -36,5 +39,10 @@ NA
 
 To view the code for this project visit the github profile below.
 Github Profile: [jasmineteters](github.com/jasmineteters)
+
 For any questions contact us via email.
 Email: [jasmineteters2020@gmail.com](mailto:jasmineteters2020@gmail.com)
+
+## Gif of App:
+
+![](/assets/vid.mp4)
