@@ -13,7 +13,7 @@ This is a Content Management System (CMS) for tracking employees within an org. 
 3. [Contributors](#Contributors)
 4. [License](#License)
 5. [Contact](#Contact)
-6. [Gif of App](#Gif-of-App)
+6. [Link to Video](#Link-to-Video)
 
 ## Installation
 
@@ -43,6 +43,6 @@ Github Profile: [jasmineteters](github.com/jasmineteters)
 For any questions contact us via email.
 Email: [jasmineteters2020@gmail.com](mailto:jasmineteters2020@gmail.com)
 
-## Gif of App:
+## Link to Video:
 
-![](/assets/vid.mp4)
+[![Employee Tracker](https://img.youtube.com/vi/cAiSgQtWCKU/0.jpg)](https://youtu.be/cAiSgQtWCKU "Employee Tracker")
